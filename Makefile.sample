@@ -1,0 +1,13 @@
+all: clean compile run
+
+clean:
+	rm -rf ./bin
+	mkdir ./bin
+
+compile:
+	clang++ -std=c++11 -Wall -Wextra -Wpedantic -Werror Small.cpp -o ./bin/run
+
+run:
+	./bin/run
+
+.PHONY: all clean compile run
